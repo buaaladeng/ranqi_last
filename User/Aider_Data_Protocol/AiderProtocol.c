@@ -314,6 +314,7 @@ void SendDataToServ(CommunicateType CommType,struct TagStruct TagList[],uint8_t 
 	if(MessageSendSeq==1)
 		{
 			SType   = TYPE_SMS;                          //短信发送
+			MessageSendSeq=0;                            //数据传输恢复为433
 		}
 		else 
 		{SType    = TYPE_433; }                      //直接发送至集中器
